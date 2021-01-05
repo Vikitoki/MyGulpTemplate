@@ -1,0 +1,97 @@
+//  Input + label ========================================================
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+
+    &:checked + .checkbox__text {
+      &::before {
+        border-color: #53b5de;
+      }
+
+      &::after {
+        background-color: #53b5de;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 12px;
+    font-weight: 300;
+    color: #666666;
+
+    cursor: pointer;
+
+    position: relative;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin-right: 15px;
+
+      border: 2px solid #dadada;
+
+      transition: border-color 0.2s ease;
+    }
+
+    &::after {
+      content: "";
+
+      display: block;
+      width: 9px;
+      height: 9px;
+
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      z-index: 1;
+
+      background-color: transparent;
+
+      transition: background-color 0.2s ease;
+    }
+  }
+}
+
+//  Standart for img ===============================================================
+
+.example {
+  padding-bottom: 60%;
+
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+//  Get text with ... ==================================================================
+
+.example {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

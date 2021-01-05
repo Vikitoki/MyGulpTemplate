@@ -1,0 +1,49 @@
+
+
+<!-- Svg sprites =================================  -->
+
+<!-- Begin -->
+
+<svg display="none">
+  <symbol id="facebook" viewBox="...">
+    <g>
+      <path ... />
+      <!-- Не забываем здесь удалить fill -->
+    </g>
+  </symbol>
+
+  <symbol id="twitter" viewBox="...">
+    <g>
+      <path ... />
+      <!-- Не забываем здесь удалить fill -->
+    </g>
+  </symbol>
+</svg>
+
+<!-- Body -->
+
+<svg class="icon icon_f">
+  <use xlink:href="#facebook"></use>
+</svg>
+
+<svg class="icon icon_t">
+  <use xlink:href="#twitter"></use>
+</svg>
+
+
+
+
+<div class="header__menu menu">
+	<div class="menu__icon icon-menu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<nav class="menu__body">
+		<ul class="menu__list">
+			<li><a href="#tabs-block" class="menu__link _goto-block">Табы</a></li>
+			<li><a href="#form" class="menu__link _goto-block">Форма</a></li>
+			<li><a href="#gallery-block" class="menu__link _goto-block">Галерея</a></li>
+		</ul>
+	</nav>
+</div>
